@@ -1,0 +1,116 @@
+body {
+	/*background: url(../img/midnight_blue.png);*/
+	background: #121211;
+}
+	
+	
+canvas {
+	background: #fff;
+	display: block;
+	margin: auto;
+}
+
+select{
+	width:90%;
+}
+
+textarea {
+    resize: none;
+	width: 80%;
+}
+
+hr{
+	width: 90%;
+	margin: 1em auto;
+}
+
+#byWhatResults{
+	width: 90%;
+	margin: auto;
+}
+
+#publishMeme{
+	text-align: center;
+}
+
+#publishMeme button{
+	width: 80%;
+}	
+
+#searchBy{
+	width:80%;
+}
+
+#ownImg{
+	width: 80%;
+}
+
+.h_margin_auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sidebar{
+	padding: 0.5em;
+	overflow: auto;
+}
+
+.byResult{
+	margin: 0.25em auto;
+	cursor: pointer;
+}
+
+.byResult div:hover{
+	text-decoration:underline;
+}
+
+.add-on{
+	color: #121211;
+}
+
+.centered_content{
+	text-align: center;
+}
+
+.push_up_3px{
+	position: relative;
+	top: -3px;
+}
+
+.text_right{
+	text-align: right;
+}
+
+.box_it{
+	color: #ddddd1;
+	margin: 0.5em;
+	padding: 1em;
+	background: #2b2b2b;
+	border-radius: 0.5em;
+}
+
+.memeText{
+	margin: auto;
+	color: white;
+	font-size: 50.148px;
+	padding: 27.86px;
+	text-shadow: -4.179px -4.179px 0 #000000, 4.179px -4.179px 0 #000000, -4.179px 4.179px 0 #000000, 4.179px 4.179px 0 #000000, -4.179px 0 0 #000000, 4.179px 0 0 #000000, 0 4.179px 0 #000000, 0 -4.179px 0 #000000;
+	font-family: Impact,'Memefont',sans-serif;
+}
+
+.dont_show{
+	display: none;
+}
+
+.overlay_blocker{
+	background: rgba(0,0,0,0.6);
+}
+
+.width_80{
+	width: 80%;
+}
+
+@font-face{
+	font-family: 'Customeme';
+	src: url('impact.ttf');
+}
