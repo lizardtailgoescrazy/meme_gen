@@ -21,13 +21,13 @@
 						$buffer = trim($buffer);
 						$dest = $buffer;
 						$mName = str_replace("_", " ", $buffer);
-						$mName = substr($mName, 4, count($mName)-5);
+						//$mName = substr($mName, 4, count($mName)-5);
 						$mName = ucfirst($mName);
 						if($counter%4 == 0){
 							print('</div>');
 							print('<div class="row-fluid">');
 						}
-						print("<div class='span3 byResult' destination='$dest' mName='$mName'>");
+						print("<div class='col-sm-3 col-xs-6 byResult' destination='$dest' mName='$mName'>");
 							$thumbnailUrl = "img/thumb/".$buffer;
 							print("<img src='".$thumbnailUrl."' /><br>");
 						print("</div>");
@@ -54,7 +54,7 @@
 					print('</div>');
 					print('<div class="row-fluid">');
 				}				
-				print("<div class='span3 byResult' destination='$dest' mName='$mName'>");
+				print("<div class='col-sm-3 byResult' destination='$dest' mName='$mName'>");
 					$thumbnailUrl = str_replace("400x", "60x60", $result["imageUrl"]);
 					print("<img src='".$thumbnailUrl."' /><br>");
 				print("</div>");

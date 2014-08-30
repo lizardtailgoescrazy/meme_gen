@@ -342,7 +342,7 @@
 		};
 		
 		/*Setters for initial stuffs*/
-		imageObj.src = 'img/memes/1031.jpg';
+		imageObj.src = 'img/cached/15_success_kid.jpg';
 		getByList("Generators_Select_ByMostUsed?pageIndex="+byPageNo+"&pageSize=24");
 		
 		$("canvas").ready(function(){
