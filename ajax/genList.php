@@ -27,7 +27,7 @@
 							print('</div>');
 							print('<div class="row-fluid">');
 						}
-						print("<div class='col-sm-3 col-xs-6 byResult' destination='$dest' mName='$mName'>");
+						print("<div class='col-sm-4 col-xs-6 byResult' destination='$dest' mName='$mName'>");
 							$thumbnailUrl = "img/thumb/".$buffer;
 							print("<img src='".$thumbnailUrl."' /><br>");
 						print("</div>");

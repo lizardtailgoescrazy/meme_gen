@@ -175,6 +175,7 @@
 		if(text.length == 0){
 			text = "Top text";
 		}
+		text = text.toUpperCase();
 		var x = w*(0.5);
 		var y = 0;
         var words = text.split(' ');
@@ -237,8 +238,9 @@
 		if(text.length == 0){
 			text = "Bottom text";
 		}
+		text = text.toUpperCase();
 		var x = w*(0.5);
-		var y = h*(0.98);
+		var y = h*(0.95);
         var words = text.split(' ');
 		var context = App.ctx;
 		var maxWidth = w*(0.95);
@@ -455,7 +457,10 @@
 		});
 		
 		$("#publishMeme").ready(function(){
-			$("#publishMeme").submit(function(){
+			$("#publishMeme").submit(function(e){
+				if(($("#imgId").val()) == "null"){
+					e.preventDefault();
+				}
 				if($("#topTextBox").val().length == 0){
 					alert("No top text? Why ?");
 					$("#topTextBox").focus();

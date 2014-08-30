@@ -1,3 +1,12 @@
+<?php
+	if(isset($_GET['mode'])){
+		$mode = $_GET['mode'];
+	}
+	else{
+		$mode = 'index';
+	}
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -11,41 +20,34 @@
 </head>
 	<body>
 	<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Memegur</a>
-    </div>
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">Memegur</a>
+	    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Make a meme</a></li>
-        <li><a href="?mode=custom">Custom meme</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="?mode=terms">Terms of Service</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="<?php if($mode == 'index'){echo('active');} ?>"><a href="/">Make a meme</a></li>
+	        <li class="<?php if($mode == 'custom'){echo('active');} ?>"><a href="?mode=custom">Custom meme</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="<?php if($mode == 'terms'){echo('active');} ?>"><a href="?mode=terms">Terms of Service</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 		<?php
 	
 		$pagesPath = "pages/";
 		$jsPath = "js/";
-	
-		if(isset($_GET['mode'])){
-			$mode = $_GET['mode'];
-		}
-		else{
-			$mode = 'index';
-		}
 		
 		if(file_exists($pagesPath.$mode.".php")){
 			include($pagesPath.$mode.".php");

@@ -16,7 +16,9 @@ select{
 
 textarea {
     resize: none;
-	width: 80%;
+	width: 90%;
+	border: solid 2px #232323;
+
 }
 
 hr{
@@ -54,7 +56,7 @@ hr{
 
 .byResult img{
 	min-width: 100%;
-	max-width: 150%;
+	max-width: 120%;
 }
 
 .byResult div:hover{

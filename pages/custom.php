@@ -48,59 +48,48 @@
 	}
 ?>
 
-<div class="row-fluid">
-	<div id="leftSideBar" class="offset1 span3">
-		<div id="logoHolder" class="box_it centered_content">
-			<a href="http://www.memegur.com"><img src="img/logo.png" /></a>
-		</div>
-		<?php if($displayMode == "submitted"){ ?>
-		<!-- Custom image has been submitted -->
-		<div class="box_it">
-			<h5>Top text</h5>
-			<div class="control-group centered_content">
-				<textarea id="topTextBox" class="memeInput" placeholder="Enter top text here..."></textarea>
-			</div>
-			
-			<h5>Bottom text</h5>
-			<div class="control-group centered_content">
-				<textarea id="bottomTextBox" class="memeInput" placeholder="Enter bottom text here..."></textarea>
-			</div>
-		</div>
-		
-		<div class="box_it">
-			<form id="publishMeme" method="post" action="?mode=customPublish">
-			<input type="hidden" value="null" name="uData" id="uData" />
-			<input type="hidden" value="null" name="localLoc" id="localLoc"/>
-			<input type="hidden" value="null" name="imgId" id="imgId"/>
-			<button id="pubMeme" type="submit" class="btn btn-success btn-large">Publish   <img id="publishLoading" src="img/loading3.gif" class="dont_show"/></button>
-			</form>
-			<h6 id="publishInfo"></h6>
-		</div>
-		
-		<div class="box_it centered_content">
-			<a href="?mode=terms">Terms of service</a>
-		</div>
-		<?php } ?>
-	</div>
-	<div id="builder" class="span5 box_it centered_content">
+<div class="container-fluid">
+	<?php if($displayMode != "submitted"){ ?>
+	<div id="builder" class="col-sm-5 box_it centered_content">
 		<form id="customBuilder" method="post" action="">
 			<label>If you want to use a custom image as a meme background enter the image URL below, you cannot upload from your hardrive, you can only provide internet URLs.</label>
 			<input type="text" class="width_80" id="imageURL" name="imageURL" placeholder="Enter Image URL..."/></br>
 			<input type="submit" class="btn btn-large btn-success" value="Use as meme background" name="customSubmit" />
 		</form>
-		<?php if($displayMode == "submitted"){ ?>
+		<?php }if($displayMode == "submitted"){ ?>
 		<!-- Custom image has been submitted -->
 		<div id="builder">
 			<div id="canvasHolder" class="box_it" style="margin: 0.5em auto;">
+				<div class="box_it">
+					<div class="control-group centered_content">
+						<textarea id="topTextBox" class="memeInput" placeholder="TOP TEXT"></textarea>
+					</div>
+					
+				</div>
 				<article>
 					<!-- canvas loads here-->
 				</article>
+				<div class="box_it">
+					<div class="control-group centered_content">
+						<textarea id="bottomTextBox" class="memeInput" placeholder="BOTTOM TEXT"></textarea>
+					</div>
+				</div>
+				
+				<div class="box_it">
+					<form id="publishMeme" method="post" action="?mode=customPublish">
+					<input type="hidden" value="null" name="uData" id="uData" />
+					<input type="hidden" value="null" name="localLoc" id="localLoc"/>
+					<input type="hidden" value="null" name="imgId" id="imgId"/>
+					<button id="pubMeme" type="submit" class="btn btn-success btn-block">Publish this meme <img id="publishLoading" src="img/loading3.gif" class="dont_show"/></button>
+					</form>
+					<h6 id="publishInfo"></h6>
+				</div>
 			</div>
 		</div>
 		<?php } ?>
 	</div>
 	
-	<div id="rightSideBar" class="span2 text_right">
+	<div id="rightSideBar" class="col-sm-12">
 		<div class="box_it">
 			<h2>Attention</h2>
 			<p>

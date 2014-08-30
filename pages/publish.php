@@ -19,13 +19,8 @@
 	var memegur = "http://www.memegur.com?mode=view&link="+imgId;
 </script>
 
-<div class="row-fluid">
-		<div id="leftSideBar" class="offset1 span3">
-			<div id="logoHolder" class="box_it centered_content">
-				<a href="http://www.memegur.com"><img src="img/logo.png" /></a>
-			</div>
-		</div>
-	<div id="builder" class="span5 box_it">
+<div class="container">
+	<div id="builder" class="col-sm-12 box_it">
 		<h2>Successfully uploaded to imgur...!</h2>
 		<div class="centered_content" >
 			
@@ -35,34 +30,34 @@
 			
 			<hr>
 			<h6>Give us a little visibility...?</h6>
-			<div class="row-fluid">
-				<div class="span9">
-					<div class="input-prepend" style="width: 80%;">
+			<div class="container-fluid">
+				<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+					<div class="input-prepend">
 						<span class="add-on" >Memegur link</span>
-						<input type="text" id="memegurLink"></input>
+						<input type="text" id="memegurLink" style="width: 70%;"></input>
 					</div>
 				</div>
-				<button class="btn span3 push_up_3px" id="cpMemegur" onclick="window.location='<?php echo $postMemegur; ?>'">Post to reddit</button>
+				<button class="btn btn-primary col-sm-3 push_up_3px" id="cpMemegur" onclick="window.location='<?php echo $postMemegur; ?>'">Post to reddit</button>
 			</div>
 			<h6>...Or not...</h6>
 			<div class="row-fluid">
-				<div class="span9">
-					<div class="input-prepend" style="width: 80%;">
+				<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+					<div class="input-prepend">
 						<span class="add-on" >Imgur link</span>
-						<input type="text" id="imgurLink"></input>
+						<input type="text" id="imgurLink" style="width: 70%;"></input>
 					</div>
 				</div>
-					<button class="btn span3 push_up_3px" id="cpImgur" onclick="window.location='<?php echo $postImgur; ?>'">Post to reddit</button>
+					<button class="btn btn-primary col-sm-3 push_up_3px" id="cpImgur" onclick="window.location='<?php echo $postImgur; ?>'">Post to reddit</button>
 			</div>
 			
 			<div class="row-fluid">
-				<div class="span9">
-					<div class="input-prepend" style="width: 80%;">
+				<div class="col-sm-offset-3 col-sm-6 col-xs-12">
+					<div class="input-prepend">
 						<span class="add-on" >Direct link</span>
-						<input type="text" id="directLink"></input>
+						<input type="text" id="directLink" style="width: 70%;"></input>
 					</div>
 				</div>
-				<button class="btn span3 push_up_3px" id="cpLink" onclick="window.location='<?php echo $postLink; ?>'">Post to reddit</button>
+				<button class="btn btn-primary col-sm-3 push_up_3px" id="cpLink" onclick="window.location='<?php echo $postLink; ?>'">Post to reddit</button>
 			</div>
 				
 		</div>
